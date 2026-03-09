@@ -15,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -79,6 +79,17 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(bun copyfile docker git npm node sudo yarn)
 
+# History
+
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
+
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt INC_APPEND_HISTORY
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -109,32 +120,59 @@ source /usr/share/nvm/init-nvm.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# cd
+# Rust replacements
+alias cat="bat --paging=never"
+alias du="dust"
+alias grep="rg"
+alias ls="eza --icons=always --level=1 --tree"
+
+# AI
+alias aichat="aichat --role dev"
+
+# Navigation
 alias cdf="cd front"
+
+# Package managers
 
 # pnpm
 alias pnx="pnpm exec"
 alias pn="pnpm"
 alias pni="pnpm i"
 alias pna="pnpm add"
+alias pnad="pnpm add -D"
+alias pnap="pnpm add --save-peer"
 alias pnr="pnpm remove"
-alias pnd="pnpm dev"
 
 # bun
 alias bx="bunx"
+alias b="bun"
 alias bi="bun i"
 alias ba="bun add"
+alias bad="bun add -D"
+alias bap="bun add --peer"
 alias br="bun remove"
 alias bd="bun dev"
+alias bb="bun build"
+alias bs="bun start"
+alias bl="bun lint"
+alias bsl="bun stylelint"
+alias btc="bun typecheck"
+alias bk="bun knip"
+alias bv="bun validate"
+alias bt="bun test"
+alias bdoc="bun doctor"
+alias bg="bun generate"
 
-# code
-alias zshconfig="code ~/.zshrc"
+# Quick access
 alias weztermconfig="code ~/.wezterm.lua"
-
-# reload
+alias zshconfig="code ~/.zshrc"
 alias reload="source ~/.zshrc"
 
+# Plugins
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
