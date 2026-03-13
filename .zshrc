@@ -12,7 +12,8 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 # Windows
-# export NVM_DIR="$HOME/.nvm"
+# export PATH="$HOME/.nodenv/bin:$PATH"
+# eval "$(nodenv init -)"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -114,18 +115,6 @@ fi
 if [[ -s /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ]]; then
   source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 fi
-
-# Windows
-
-# # This loads nvm
-# if [ -s "$NVM_DIR/nvm.sh" ]; then
-#   source "$NVM_DIR/nvm.sh"
-# fi
-
-# # This loads nvm bash_completion
-# if [ -s "$NVM_DIR/bash_completion" ]; then
-#   source "$NVM_DIR/bash_completion"
-# fi
 
 # History
 
