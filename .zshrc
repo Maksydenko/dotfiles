@@ -151,14 +151,19 @@ setopt INC_APPEND_HISTORY
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Quick access
+alias zshconfig="code ~/.zshrc"
+alias reload="source ~/.zshrc"
+
 # Rust replacements
 alias cat="bat --paging=never"
 alias du="dust"
 alias grep="rg"
 alias ls="eza --icons=always --level=1 --tree"
 
-# AI
+# Tools
 alias aidev="aichat --role dev"
+alias ddg='function _ddg(){ xdg-open "https://duckduckgo.com/?q=$(echo "$*" | sed "s/ /+/g")"; }; _ddg'
 
 # Navigation
 alias cdf="cd front"
@@ -193,10 +198,6 @@ alias bv="bun validate"
 alias bt="bun test"
 alias bdoc="bun doctor"
 alias bg="bun generate"
-
-# Quick access
-alias zshconfig="code ~/.zshrc"
-alias reload="source ~/.zshrc"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 if [ -s ~/.p10k.zsh ]; then
