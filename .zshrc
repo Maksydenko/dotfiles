@@ -151,10 +151,6 @@ setopt INC_APPEND_HISTORY
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Quick access
-alias zshconfig="code ~/.zshrc"
-alias reload="source ~/.zshrc"
-
 # Rust replacements
 alias cat="bat --paging=never"
 alias du="dust"
