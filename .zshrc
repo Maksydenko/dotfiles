@@ -98,11 +98,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Linux
 
-# NVM
-if [[ -s /usr/share/nvm/init-nvm.sh ]]; then
-  source /usr/share/nvm/init-nvm.sh
-fi
-
 # ZSH plugins
 if [[ -s /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
   source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
