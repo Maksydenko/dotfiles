@@ -18,7 +18,7 @@
     "when": "editorHasSelection && editorTextFocus"
   },
   {
-    "key": "shift+alt+c n",
+    "key": "shift+alt+r c",
     "command": "extension.stayClassy"
   },
   {
@@ -53,7 +53,7 @@
     "command": "git.deleteBranch"
   },
   {
-    "key": "shift+alt+c b",
+    "key": "shift+alt+g b",
     "command": "git.branch"
   },
   {
@@ -69,7 +69,7 @@
     "command": "git.rebase"
   },
   {
-    "key": "shift+alt+c f",
+    "key": "shift+alt+g f",
     "command": "git.branchFrom"
   },
   {
@@ -349,7 +349,7 @@
     "command": "git.renameBranch"
   },
   {
-    "key": "shift+alt+f e",
+    "key": "shift+alt+f f",
     "command": "workbench.files.action.focusFilesExplorer"
   },
   {
@@ -399,5 +399,15 @@
     "key": "shift+alt+f2",
     "command": "-workbench.action.terminal.focusAccessibleBuffer",
     "when": "accessibilityModeEnabled && terminalFocus && terminalHasBeenCreated || accessibilityModeEnabled && terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+alt+x",
+    "command": "editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "-editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
   }
 ]
