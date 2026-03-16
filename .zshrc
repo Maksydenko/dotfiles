@@ -159,7 +159,10 @@ alias ls="eza --icons=always --level=1 --tree"
 
 # Tools
 alias aidev="aichat --role dev"
+# Linux
 alias ddg='function _ddg(){ xdg-open "https://duckduckgo.com/?q=$(echo "$*" | sed "s/ /+/g")"; }; _ddg'
+# Windows
+# alias ddg='function _ddg(){ powershell.exe /c start "https://duckduckgo.com/?q=$(echo "$*" | sed "s/ /+/g")"; }; _ddg'
 
 # Navigation
 alias cdf="cd front"
