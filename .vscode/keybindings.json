@@ -22,11 +22,6 @@
     "command": "extension.stayClassy"
   },
   {
-    "key": "shift+alt+f d",
-    "command": "prettier.forceFormatDocument",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "shift+alt+f l",
     "command": "extension.insertLink"
   },
@@ -53,7 +48,7 @@
     "command": "git.deleteBranch"
   },
   {
-    "key": "shift+alt+c b",
+    "key": "shift+alt+g b",
     "command": "git.branch"
   },
   {
@@ -162,7 +157,7 @@
     "when": "breadcrumbsPossible && breadcrumbsVisible"
   },
   {
-    "key": "ctrl+shift+f",
+    "key": "ctrl+alt+f",
     "command": "notebook.formatCell",
     "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
   },
@@ -172,7 +167,7 @@
     "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
   },
   {
-    "key": "ctrl+shift+f",
+    "key": "ctrl+alt+f",
     "command": "editor.action.formatDocument",
     "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
   },
@@ -182,7 +177,7 @@
     "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
   },
   {
-    "key": "ctrl+shift+f",
+    "key": "ctrl+alt+f",
     "command": "editor.action.formatDocument.none",
     "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
   },
