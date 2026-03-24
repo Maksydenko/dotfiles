@@ -1,0 +1,16 @@
+[Unit]
+Description=Mag Shift
+After=network.target
+
+[Service]
+User=maksydenko
+Group=maksydenko
+
+WorkingDirectory=/home/maksydenko/Documents/vscode/2026/mag-shift
+ExecStart=/usr/bin/python /home/maksydenko/Documents/vscode/2026/mag-shift/main.py --device /dev/input/by-path/platform-i8042-serio-0-event-kbd
+
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
