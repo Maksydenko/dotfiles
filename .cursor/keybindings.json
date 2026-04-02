@@ -267,7 +267,7 @@
     "command": "git.renameBranch"
   },
   {
-    "key": "shift+alt+f f",
+    "key": "ctrl+shift+e",
     "command": "workbench.files.action.focusFilesExplorer"
   },
   {
