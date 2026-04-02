@@ -1231,7 +1231,7 @@
     "command": "-workbench.action.files.copyPathOfActiveFile"
   },
   {
-    "key": "ctrl+k ctrl+p",
+    "key": "ctrl+k ctrl+o",
     "command": "workbench.action.files.openLocalFolder",
     "when": "remoteFileDialogVisible"
   },
@@ -1268,5 +1268,187 @@
     "key": "ctrl+e",
     "command": "-cursor.toggleAgentWindowIDEUnification",
     "when": "cursor.agentIdeUnification.featureGate && !isGlass && workbenchState != 'empty'"
+  },
+  {
+    "key": "ctrl+k ctrl+1",
+    "command": "editor.foldLevel1",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+m ctrl+1",
+    "command": "-editor.foldLevel1",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+2",
+    "command": "editor.foldLevel2",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+m ctrl+2",
+    "command": "-editor.foldLevel2",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+3",
+    "command": "editor.foldLevel3",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+m ctrl+3",
+    "command": "-editor.foldLevel3",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+4",
+    "command": "editor.foldLevel4",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+m ctrl+4",
+    "command": "-editor.foldLevel4",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+5",
+    "command": "editor.foldLevel5",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+m ctrl+5",
+    "command": "-editor.foldLevel5",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+6",
+    "command": "editor.foldLevel6",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+m ctrl+6",
+    "command": "-editor.foldLevel6",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+7",
+    "command": "editor.foldLevel7",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+m ctrl+7",
+    "command": "-editor.foldLevel7",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+k",
+    "command": "editor.action.defineKeybinding",
+    "when": "resource == 'vscode-userdata:/c%3A/Users/maksy/AppData/Roaming/Cursor/User/keybindings.json'"
+  },
+  {
+    "key": "ctrl+m ctrl+k",
+    "command": "-editor.action.defineKeybinding",
+    "when": "resource == 'vscode-userdata:/c%3A/Users/maksy/AppData/Roaming/Cursor/User/keybindings.json'"
+  },
+  {
+    "key": "ctrl+m ctrl+shift+c",
+    "command": "-copyRelativeFilePath",
+    "when": "!editorFocus"
+  },
+  {
+    "key": "ctrl+m ctrl+shift+c",
+    "command": "-copyRelativeFilePath",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+m ctrl+shift+s",
+    "command": "-workbench.action.files.saveWithoutFormatting"
+  },
+  {
+    "key": "ctrl+k ctrl+0",
+    "command": "editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+m ctrl+0",
+    "command": "-editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+/",
+    "command": "editor.foldAllBlockComments",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+m ctrl+/",
+    "command": "-editor.foldAllBlockComments",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+-",
+    "command": "editor.foldAllExcept",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+m ctrl+-",
+    "command": "-editor.foldAllExcept",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+8",
+    "command": "editor.foldAllMarkerRegions",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+m ctrl+8",
+    "command": "-editor.foldAllMarkerRegions",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k s",
+    "command": "saveAll"
+  },
+  {
+    "key": "ctrl+m s",
+    "command": "-saveAll"
+  },
+  {
+    "key": "ctrl+k ctrl+[",
+    "command": "editor.foldRecursively",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+m ctrl+[",
+    "command": "-editor.foldRecursively",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+shift+enter",
+    "command": "editor.action.submitComment",
+    "when": "commentEditorFocused"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-editor.action.submitComment",
+    "when": "commentEditorFocused"
+  },
+  {
+    "key": "ctrl+shift+y",
+    "command": "workbench.debug.action.toggleRepl",
+    "when": "workbench.panel.repl.view.active"
+  },
+  {
+    "key": "ctrl+shift+alt+y",
+    "command": "-workbench.debug.action.toggleRepl",
+    "when": "workbench.panel.repl.view.active"
+  },
+  {
+    "key": "ctrl+k e",
+    "command": "workbench.files.action.focusOpenEditorsView",
+    "when": "workbench.explorer.openEditorsView.active"
+  },
+  {
+    "key": "ctrl+m e",
+    "command": "-workbench.files.action.focusOpenEditorsView",
+    "when": "workbench.explorer.openEditorsView.active"
   }
 ]
