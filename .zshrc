@@ -11,8 +11,8 @@ fi
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
+# FNM
+eval "$(fnm env --use-on-cd)"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -93,6 +93,7 @@ plugins=(
   # zsh-syntax-highlighting
 )
 
+# Oh My Zsh
 source $ZSH/oh-my-zsh.sh
 
 # Linux
@@ -104,11 +105,13 @@ fi
 if [[ -s /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
-
 # Powerlevel10k
 if [[ -s /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ]]; then
   source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 fi
+
+# ZSH autosuggestions
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # History
 
