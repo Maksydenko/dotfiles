@@ -11,8 +11,12 @@ fi
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# FNM
-eval "$(fnm env --use-on-cd)"
+# Windows
+# # Path to your fnm installation.
+# export PATH="$HOME/.local/share/fnm:$PATH"
+# # Path to your Bun installation.
+# export BUN_INSTALL="$HOME/.bun"
+# export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -82,10 +86,7 @@ eval "$(fnm env --use-on-cd)"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  bun
   git
-  node
-  npm
   sudo
   yarn
   # Windows
@@ -96,9 +97,28 @@ plugins=(
 # Oh My Zsh
 source $ZSH/oh-my-zsh.sh
 
+# fnm
+if [ -d "$HOME/.local/share/fnm" ]; then
+  eval "$(fnm env)"
+fi
+
+# History
+
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt INC_APPEND_HISTORY
+
+# Autosuggest
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
 # Linux
 
-# ZSH plugins
+# Plugins
 if [[ -s /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
   source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
@@ -110,19 +130,10 @@ if [[ -s /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ]]; then
   source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 fi
 
-# ZSH autosuggestions
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-
-# History
-
-HISTSIZE=10000
-SAVEHIST=10000
-HISTFILE=~/.zsh_history
-
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_FIND_NO_DUPS
-setopt HIST_IGNORE_SPACE
-setopt INC_APPEND_HISTORY
+# Windows
+# # Bun
+# export BUN_INSTALL="$HOME/.bun"
+# export PATH="$BUN_INSTALL/bin:$PATH"
 
 # User configuration
 
@@ -171,13 +182,21 @@ alias cdf="cd front"
 
 # Package managers
 
+# npm
+alias nx="npx"
+alias n="npm"
+alias ni="npm i"
+alias nid="npm i -D"
+alias nis="npm i --save-peer"
+alias nr="npm remove"
+
 # pnpm
 alias pnx="pnpm exec"
 alias pn="pnpm"
 alias pni="pnpm i"
 alias pna="pnpm add"
 alias pnad="pnpm add -D"
-alias pnap="pnpm add --save-peer"
+alias pnas="pnpm add --save-peer"
 alias pnr="pnpm remove"
 
 # bun
